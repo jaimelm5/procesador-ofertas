@@ -118,7 +118,7 @@ def procesar_oferta(archivo_bytes, porcentaje_max):
                     except:
                         cantidad = 1
                     
-                    if celda_uds:
+                    '''if celda_uds:
                         valor_uds_limpio = valor_uds
                         if valor_uds and isinstance(valor_uds, str):
                             valor_uds_limpio = valor_uds.replace('ud', '').replace('Ud', '').replace('UD', '').strip()
@@ -132,7 +132,7 @@ def procesar_oferta(archivo_bytes, porcentaje_max):
                             celda_uds.value = f"{cantidad_uds:.2f}ud".replace('.', ',')
                             stats['unidades_formateadas'] += 1
                         except:
-                            pass
+                            pass'''
                     
                     precio_nuevo = aplicar_aumento_aleatorio(precio_num, PORCENTAJE_MIN, porcentaje_max)
                     celda_precio_unitario.value = precio_nuevo
